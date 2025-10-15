@@ -2,9 +2,9 @@
 import maskpass
 
 def set_pswd():
-    pswd = input("Provide password: ")
+    pswd = maskpass.askpass("Provide password: ")
     try:
-        if(input("Verify a password: ") == pswd):
+        if(maskpass.askpass("Verify a password: ") == pswd):
             print("Password set successfully!")
         else:
             raise Exception('Verification failed - repeated password was not identical')
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     pswd = set_pswd()
 
     if(pswd!= ""):
-        usr_input = input("Please provide a password to enter: ")
+        usr_input = maskpass.askpass("Please provide a password to enter: ")
         verify(usr_input,pswd)
     
             
