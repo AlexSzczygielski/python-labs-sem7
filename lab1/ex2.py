@@ -1,6 +1,7 @@
 import random
 from multiprocessing import Pool, cpu_count
 import heapq
+import time
 
 def get_random_data(x):
     data = []
@@ -26,17 +27,35 @@ def parallel_sort(data):
         sorted_chunks = p.map(sort_single,chunks)
 
     #Merge sorted data
-    #merged = sorted(sum(sorted_chunks, []))
-    merged = list(heapq.merge(*sorted_chunks))
+    merged = sorted(sum(sorted_chunks, [])) #sorts everything again - bad ?
+    #merged = list(heapq.merge(*sorted_chunks)) #uses tree structure
 
     return merged
 
 
 if __name__ == '__main__':
-    rand_data = get_random_data(100000)
-    print("RANDOM ",rand_data)
+    #generate random data
+    dataset_size = 100000000
+    print("dataset_size = ",dataset_size)
+    rand_data = get_random_data(dataset_size)
+    #print("RANDOM ",rand_data)
 
+    #Sort single process
+    start = time.time()
+
+    sorted_data = sort_single(rand_data)
+
+    end = time.time()
+    print(f"single thread sort:  {round((end - start),4)} seconds")
+
+    #print("SORTED ",sorted_data)
+
+    #Sort parallel processes
+    start = time.time()
     sorted_data = parallel_sort(rand_data)
+    end = time.time()
+    print(f"parallel sort:  {round((end - start),4)} seconds")
 
-    print("SORTED ",sorted_data)
+
+    #print("SORTED ",sorted_data)
     
