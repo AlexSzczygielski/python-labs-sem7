@@ -1,3 +1,5 @@
+#This approach allows for reading files line by line - eliminates issues with huge files being loaded to the RAM
+#re used to break up sentence into words - either by commas or spaces
 import re
 
 def print_document(file):
@@ -6,19 +8,26 @@ def print_document(file):
             print(line)
 
 
-def remove_words(words, file):
+def remove_words(filter_words, file):
+    #filter_words - filter sentences
+    #file - filepath
+
     remove_count = 0
-    print(f"Words to remove [FILTER]: {words} \n Filtered (removed) sentence: \n|\n|\nv")
+    print(f"Words to remove [FILTER]: {filter_words} \n Filtered (removed) sentence: \n|\n|\nv")
 
     with open(file, 'r', encoding="utf-8") as txt:
         for line in txt: #load line
-            temp = line
-            temp = re.split(r'[, ]', temp) #split for words
-            #Add checking for each word, not for line (issue with 'i' removal from nigdy)
-            for sub_str in words:
-                if sub_str in line:
-                    line = line.replace(sub_str,'')
-                    remove_count += 1
+            line_words = re.split(r'[, ]', line) #creates a list of words in sentence
+            #print(f"len(line_words) = {len(line_words)}, print(line_words) = {line_words}")
+            for word in line_words:
+                for sub_str in filter_words: #Check each filter word
+                    if sub_str == word:
+                        #print(f"substr FOUND, Word: {word}, thing to remove: {sub_str}")
+                        line_words.remove(sub_str)
+                        #word = word.replace(sub_str,'')
+                        remove_count += 1
+                    #print("substr NOT FOUND")
+                    line = " ".join(line_words)
             print(line)
             
 
