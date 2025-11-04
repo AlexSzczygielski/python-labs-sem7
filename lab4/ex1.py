@@ -8,7 +8,7 @@ def print_document(file):
 
 def remove_words(words, file):
     remove_count = 0
-    print("Words to remove: ", words)
+    print(f"Words to remove [FILTER]: {words} \n Filtered (removed) sentence: \n|\n|\nv")
 
     with open(file, 'r', encoding="utf-8") as txt:
         for line in txt: #load line
@@ -26,10 +26,15 @@ def remove_words(words, file):
     
 
 if __name__ == "__main__":
+    #input string filepath
     doc = 'text.txt'
+    #remove filter
     rem_words = ['się', 'oraz', 'nigdy', 'dlaczego', 'i']
 
-    print("Input text: ",print_document(doc))
+
+    print(f"--------\nInput text: ")
+    print_document(doc)
+    print("---------")
 
     remove_words(rem_words, doc)
 
