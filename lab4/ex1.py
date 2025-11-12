@@ -40,14 +40,23 @@ if __name__ == "__main__":
     #remove filter
     rem_words = ['się', 'oraz', 'nigdy', 'dlaczego', 'i']
 
+    print("------\n1. Provide input string\n2. Provide input file\n3. Enter demonstration mode")
 
-    print(f"--------\nInput text: ")
-    print_document(doc)
+    choice = input()
+
+    match choice:
+        case "1":
+            print("Provide your direct input text:\n")
+            print(f"--------\nInput text: ")
+        case "2":
+            print("Provide filepath to your txt file")
+            print(f"--------\nInput text: ")
+        case "3":
+            print("Enter demonstration mode")
+            print(f"--------\nInput text: ")
+            print_document(doc)
+            remove_words(rem_words, doc)
+        case _:
+            print("wrong choice")
+            
     print("---------")
-
-    remove_words(rem_words, doc)
-
-
-        
-
-        
