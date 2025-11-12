@@ -59,34 +59,40 @@ if __name__ == "__main__":
     #remove filter
     rem_words = ['się', 'oraz', 'nigdy', 'dlaczego', 'i']
 
-    print(f"------\n1. Provide input string\n2. Provide input file\n3. Enter demonstration mode [requires {doc} file]")
+    while(True):
+        print(f"------\n1. Provide input string\n2. Provide input file\n3. Enter demonstration mode [requires {doc} file]\n4. Exit")
 
-    choice = input()
+        choice = input()
 
-    match choice:
-        case "1":
-            print("Provide your direct input text:\n")
-            str_in = input()
-            if os.path.isfile(str_in):
-                print("Provided input is a file!")
-            else:
+        match choice:
+            case "1":
+                print("Provide your direct input text:\n")
+                str_in = input()
+                if os.path.isfile(str_in):
+                    print("Provided input is a file!")
+                else:
+                    print(f"--------\nInput text: ")
+                    print(str_in)
+                    remove_words(rem_words, str_in)
+            case "2":
+                print("Provide filepath to your txt file")
+                str_in = input()
+                try:
+                    print(f"--------\nInput text: ")
+                    print_document(str_in)
+                    remove_words(rem_words, str_in)
+                except Exception as e:
+                    print(f"Mode 2, filepath mode error: {e}")
+            case "3":
+                print(f"Enter demonstration mode [requires {doc}]")
                 print(f"--------\nInput text: ")
-                print(str_in)
-                remove_words(rem_words, str_in)
-        case "2":
-            print("Provide filepath to your txt file")
-            str_in = input()
-            try:
-                print(f"--------\nInput text: ")
-                print_document(str_in)
-                remove_words(rem_words, str_in)
-            except Exception as e:
-                print(f"Mode 2, filepath mode error: {e}")
-        case "3":
-            print(f"Enter demonstration mode [requires {doc}]")
-            print(f"--------\nInput text: ")
-            print_document(doc)
-            remove_words(rem_words, doc)
-        case _:
-            print("wrong choice")        
-    print("---------")
+                print_document(doc)
+                remove_words(rem_words, doc)
+
+            case "4":
+                print("Quitting the program loop")
+                break
+
+            case _:
+                print("wrong choice")        
+        print("---------")
