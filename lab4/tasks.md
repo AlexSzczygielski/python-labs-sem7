@@ -1,7 +1,9 @@
+# Lab 3 Text Processing
 # 1
 Write a script that removes from an input text (direct input or from a txt file) the following words: **się, i, oraz, nigdy, dlaczego**
 # 2
-Write a script that, in a given input, replaces the words **i, oraz, nigdy, dlaczego** with **oraz, i ,prawie, nigdy, czemu** respectivelly. Suggested structure: a dictionary
+Write a script that, in a given input, replaces the words **i, oraz, nigdy, dlaczego**
+with **oraz, i, prawie nigdy, czemu** respectively. Suggested structure: a dictionary.
 
 # Ad 1 - terminal output
 <pre>  
@@ -56,6 +58,45 @@ removed words:  10
 1. Provide input string
 2. Provide input file
 3. Enter demonstration mode [requires text.txt file]
+4. Exit
+4
+Quitting the program loop
+lab4 %
+</pre>
+
+# Ad 2 - terminal output
+<pre>
+lab4 % python3 ex2.py   
+------
+1. Provide input string
+2. Provide input file
+3. Enter demonstration mode [requires text2.txt file]
+4. Exit
+3
+Enter demonstration mode [requires text2.txt]
+--------
+Input text: 
+L1 dlaczego, nigdy oraz i 
+
+L2 slowo, się, slowo, i, slowo, oraz, slowo, nigdy, slowo, dlaczego, slowo
+
+L3 KONIEC PLIKU
+Words to switch [FILTER]: {'i': 'oraz', 'oraz': 'i', 'nigdy': 'prawie nigdy', 'dlaczego': 'czemu'} 
+ Filtered (switched) sentence: 
+|
+|
+v
+L1 czemu  prawie nigdy i oraz 
+
+L2 slowo  się  slowo  oraz  slowo  i  slowo  prawie nigdy  slowo  czemu  slowo
+
+L3 KONIEC PLIKU
+Switched cases:  8
+---------
+------
+1. Provide input string
+2. Provide input file
+3. Enter demonstration mode [requires text2.txt file]
 4. Exit
 4
 Quitting the program loop
