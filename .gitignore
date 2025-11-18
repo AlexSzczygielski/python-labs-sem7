@@ -212,3 +212,4 @@ __marimo__/
 text_files/
 *tar
 .DS_Store
+.vscode/

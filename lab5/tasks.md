@@ -13,3 +13,63 @@
 ## 5. Multiply two 8x8 matrices.
 
 ## 6. Compute the determinant of a randomly generated matrix.
+
+# Answers:
+
+## Ad. 1
+```bash
+lab5 % python3 ex1.py 
+Quadratic equation: 1x^2 + 5x + 6 has roots: ((-2+0j), (-3+0j))
+Quadratic equation: 1x^2 + 2x + 1 has roots: ((-1+0j), (-1+0j))
+Quadratic equation: 1x^2 + 0x + 1 has roots: (1j, -1j)
+```
+
+## Ad. 2
+```bash
+python3 ex2.py
+Success! Sorting in descending order completed. Verification OK
+Sorted array: [931, 794, 776, 751, 708, 669, 651, 594, 579, 549, 543, 539, 526, 509, 464, 463, 444, 428, 382, 346, 342, 298, 221, 181, -54, -63, -78, -82, -192, -195, -307, -336, -339, -386, -412, -424, -438, -479, -492, -540, -563, -600, -607, -645, -654, -821, -828, -893, -964, -984]
+```
+
+## Ad. 3
+```bash
+lab5 % python3 ex3.py
+Scalar product of vectors [1, 2, 12, 4] and [2, 4, 2, 8] is:
+ 66
+```
+
+## Ad. 4
+Verification for 2x2 matrices:
+```bash
+lab5 % python3 ex4.py
+Sum two 128x128 matrices (generated randomly)
+Matrix 1: size 2 x 2 
+MATRIX 1: 
+[[10, 1], [-1, 1]]
+Matrix 2: size 2 x 2 
+MATRIX 2: 
+[[-4, 8], [-7, 6]]
+sum_matrices(matrix1,matrix2):
+ [[6, 9], [-8, 7]]
+np_sum 2: 
+[[ 6  9]
+ [-8  7]]
+Verification is OK - SUCCESS
+```
+
+Debugging off, 128x128 matrices:
+```bash
+lab5 % python3 ex4.py
+Sum two 128x128 matrices (generated randomly)
+Matrix 1: size 128 x 128 
+MATRIX 1: 
+
+Matrix 2: size 128 x 128 
+MATRIX 2: 
+
+sum_matrices(matrix1,matrix2):
+ 
+np_sum 2: 
+
+Verification is OK - SUCCESS
+```
