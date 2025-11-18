@@ -1,12 +1,13 @@
 # Lab 3 Text Processing
-# 1
-Write a script that removes from an input text (direct input or from a txt file) the following words: **się, i, oraz, nigdy, dlaczego**
-# 2
-Write a script that, in a given input, replaces the words **i, oraz, nigdy, dlaczego**
-with **oraz, i, prawie nigdy, czemu** respectively. Suggested structure: a dictionary.
 
-# Ad 1 - terminal output
-<pre>  
+### 1. Write a script that removes from an input text (direct input or from a txt file) the following words: **się, i, oraz, nigdy, dlaczego**
+
+### 2. Write a script that, in a given input, replaces the words **i, oraz, nigdy, dlaczego** with **oraz, i, prawie nigdy, czemu** respectively. Suggested structure: a dictionary.
+
+# Answers:
+
+## [Ad. 1](ex1.py)
+```bash
 lab4 % python3 ex1.py
 ------
 1. Provide input string
@@ -62,10 +63,10 @@ removed words:  10
 4
 Quitting the program loop
 lab4 %
-</pre>
+```
 
-# Ad 2 - terminal output
-<pre>
+## [Ad. 2](ex2.py)
+```bash
 lab4 % python3 ex2.py   
 ------
 1. Provide input string
@@ -101,4 +102,4 @@ Switched cases:  8
 4
 Quitting the program loop
 lab4 %
-</pre>
+```
