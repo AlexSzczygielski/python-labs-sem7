@@ -15,7 +15,7 @@ def verify(matrix1, matrix2, result):
     np_sum = np_1 + np_2
     np_result = np.array(result)
 
-    return np.array_equal(np_result,np_sum), np_result
+    return np.array_equal(np_result,np_sum), np_sum
 
 if __name__ == "__main__":
     debug = False
