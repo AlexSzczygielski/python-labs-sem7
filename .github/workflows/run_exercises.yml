@@ -31,7 +31,7 @@ jobs:
             echo "Initial run: will process all Python files"
           else
             # Get changed Python files in this push
-            CHANGED_FILES=$(git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep '\.py$' | grep -v '^lab4/')
+            CHANGED_FILES=$(git diff --name-only ${{ github.sha }} ${{ github.event.before }} | grep '\.py$' | grep -v '^lab4/' | grep -v '^lab1/')
             echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
             echo "Initial run already done, will process only changed Python files"
           fi
@@ -39,7 +39,7 @@ jobs:
       - name: Run scripts and output to answers.md in each lab
         run: |
           # Find all lab directories containing Python scripts
-          LAB_DIRS=$(find . -type f -name "ex*.py" -exec dirname {} \; | sort -u)
+          LAB_DIRS=$(find . -type f -name "ex*.py" -exec dirname {} \; | grep -v '^./lab4$' | grep -v '^./lab1$' | sort -u)
       
           for lab in $LAB_DIRS; do
             echo "Processing lab: $lab"
@@ -49,7 +49,7 @@ jobs:
       
             if [ "$ALL_FILES" = "true" ]; then
               # Run all ex*.py in this lab, excluding lab4
-              for file in $(find "$lab" -maxdepth 1 -type f -name "ex*.py" ! -path "./lab4/*"); do
+              for file in $(find "$lab" -maxdepth 1 -type f -name "ex*.py" ! -path "./lab4/*" ! -path "./lab1/*"); do
                 echo "### $file" >> "$lab/answers.md"
                 echo '```' >> "$lab/answers.md"
                 python "$file" >> "$lab/answers.md" 2>&1
