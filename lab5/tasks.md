@@ -73,3 +73,39 @@ np_sum 2:
 
 Verification is OK - SUCCESS
 ```
+
+## Ad. 5
+Verification for 2x2 matrices:
+```bash
+lab5 % python3 ex5.py
+Multiply two 8x8 matrices (generated randomly)
+Matrix 1: size 2 x 2 
+MATRIX 1: 
+[[-7, 6], [-5, -2]]
+Matrix 2: size 2 x 2 
+MATRIX 2: 
+[[2, -1], [6, -1]]
+sum_matrices(matrix1,matrix2):
+ [[22, 1], [-22, 7]]
+np_multi 2: 
+[[ 22   1]
+ [-22   7]]
+Verification is OK - SUCCESS
+```
+
+Debugging off, 8x8 matrices:
+```bash
+lab5 % python3 ex5.py
+Multiply two 8x8 matrices (generated randomly)
+Matrix 1: size 8 x 8 
+MATRIX 1: 
+
+Matrix 2: size 8 x 8 
+MATRIX 2: 
+
+sum_matrices(matrix1,matrix2):
+ 
+np_multi 2: 
+
+Verification is OK - SUCCESS
+```
