@@ -1,8 +1,10 @@
 # Lab 3 Text Processing
 
 ### 1. Write a script that removes from an input text (direct input or from a txt file) the following words: **się, i, oraz, nigdy, dlaczego**
+### [Code Output](#ad-1)
 
 ### 2. Write a script that, in a given input, replaces the words **i, oraz, nigdy, dlaczego** with **oraz, i, prawie nigdy, czemu** respectively. Suggested structure: a dictionary.
+### [Code Output](#ad-2)
 
 # Answers:
 

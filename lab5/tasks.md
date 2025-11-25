@@ -3,22 +3,22 @@
 ### Hint: 4,5,6 without numpy
 
 ## 1. Compute roots of the quadratic equation y = ax*2 + bx + c given inputs a, b, c. 
-### [Answer](#ad-1)
+### [Code Output](#ad-1)
 
 ## 2. Sort numbers in descending order. Randomly generate 50 numbers—use the standard random function. Use the built-in sorting function only to verify results.
-### [Answer](#ad-2)
+### [Code Output](#ad-2)
 
 ## 3. Compute the dot (scalar) product of vectors a = [1, 2, 12, 4] and b = [2, 4, 2, 8]. 
-### [Answer](#ad-3)
+### [Code Output](#ad-3)
 
 ## 4. Sum two 128x128 matrices (generated randomly).
-### [Answer](#ad-4)
+### [Code Output](#ad-4)
 
 ## 5. Multiply two 8x8 matrices.
-### [Answer](#ad-5)
+### [Code Output](#ad-5)
 
 ## 6. Compute the determinant of a randomly generated matrix.
-### [Answer](#ad-6)
+### [Code Output](#ad-6)
 
 ---
 
