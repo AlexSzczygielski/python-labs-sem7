@@ -33,6 +33,20 @@ def random_generator(arr_len, rand_range):
         data.append(random.randint(-rand_range, +rand_range))
     return data
 
+def colour(col,text):
+    #Colour text using ANSI escape sequence
+    RED = "\033[31m"
+    GREEN = "\033[32m"
+    STANDARD = "\033[0m"
+    match col:
+        case "red":
+            return RED + text + STANDARD
+        case "green":
+            return GREEN + text + STANDARD
+        case _:
+            return text
+
+
 if __name__ == "__main__":
     #config
     arr_len = 50
@@ -46,8 +60,8 @@ if __name__ == "__main__":
 
     #results
     if arr == arr_cp:
-        print("Success! Sorting in descending order completed. Verification OK")
+        print(f"Success! Sorting in descending order completed. {colour('green','Verification OK')}")
     else:
-        print("Verification failed, sorted array and verification arrays are not equal.")
+        print(f"{colour('red','Verification failed')}, sorted array and verification arrays are not equal.")
 
     print(f"Sorted array: {arr}")

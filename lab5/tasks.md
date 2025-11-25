@@ -2,17 +2,25 @@
 
 ### Hint: 4,5,6 without numpy
 
-## 1. Compute roots of the quadratic equation y = ax*2 + bx + c given inputs a, b, c.
+## 1. Compute roots of the quadratic equation y = ax*2 + bx + c given inputs a, b, c. 
+### [Answer](#ad-1)
 
 ## 2. Sort numbers in descending order. Randomly generate 50 numbers—use the standard random function. Use the built-in sorting function only to verify results.
+### [Answer](#ad-2)
 
-## 3. Compute the dot (scalar) product of vectors a = [1, 2, 12, 4] and b = [2, 4, 2, 8].
+## 3. Compute the dot (scalar) product of vectors a = [1, 2, 12, 4] and b = [2, 4, 2, 8]. 
+### [Answer](#ad-3)
 
 ## 4. Sum two 128x128 matrices (generated randomly).
+### [Answer](#ad-4)
 
 ## 5. Multiply two 8x8 matrices.
+### [Answer](#ad-5)
 
 ## 6. Compute the determinant of a randomly generated matrix.
+### [Answer](#ad-6)
+
+---
 
 # Answers:
 
@@ -107,5 +115,20 @@ sum_matrices(matrix1,matrix2):
  
 np_multi 2: 
 
+Verification is OK - SUCCESS
+```
+
+## [Ad. 6](ex6.py)
+Verification for 5x5 matrices:
+```bash
+lab5 % python3 ex6.py
+Calculate determinant of a matrix (generated randomly)
+Matrix 1: size 5 x 5 
+MATRIX 1: 
+[[2, -9, 2, 1, 6], [-10, 10, -2, 10, 8], [-4, -8, -7, 3, 0], [4, -5, 6, 5, -2], [6, 8, 2, 9, -4]]
+calculate_det(matrix1):
+ 129992
+np_det: 
+129991.99999999987
 Verification is OK - SUCCESS
 ```

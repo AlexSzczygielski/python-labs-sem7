@@ -1,7 +1,7 @@
 #ex5.py
 #random generator from ex2.py
 
-from ex2 import random_generator
+from ex2 import random_generator, colour
 import numpy as np # for verify only
 
 def multiply_matrices(arr1,arr2):
@@ -56,4 +56,4 @@ if __name__ == "__main__":
     f"MATRIX 2: \n{matrix2 if debug else ''}\n" \
     f"sum_matrices(matrix1,matrix2):\n {result if debug else ''}\n" \
     f"np_multi: \n{np_multi if debug else ''}\n" \
-    f"Verification is {'OK - SUCCESS' if success else 'NOT OK - FAILED'}")
+    f"Verification is {colour('green','OK - SUCCESS') if success else colour('red','NOT OK - FAILED')}")
