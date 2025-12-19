@@ -20,6 +20,12 @@ Enumeration is done counting from the first laboratories (multiprocessing, multi
 
 ---
 
+## Final Project Repository:
+
+### [Custom KNN Implementation - Final Project](https://github.com/AlexSzczygielski/custom-knn)
+
+---
+
 <div align="center">
 <img width = 20%  src= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Znak_graficzny_AGH.svg/2048px-Znak_graficzny_AGH.svg.png">
 <img width = 20%  src= "https://iet.agh.edu.pl/wp-content/uploads/2021/05/Logo-WIET-2021.png">
